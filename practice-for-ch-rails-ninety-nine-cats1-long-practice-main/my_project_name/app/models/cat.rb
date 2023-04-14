@@ -6,7 +6,7 @@ class Cat < ApplicationRecord
     validate :birth_date_cannot_be_future
 
     def birth_date_cannot_be_future
-        if self.birth_date > Date.today
+        if birth_date > Date.today
             errors.add(:birth_date, "your cat can't be a time traveller")
         end
     end
